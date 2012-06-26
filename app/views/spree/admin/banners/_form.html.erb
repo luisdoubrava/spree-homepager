@@ -18,7 +18,7 @@
 
 <%= f.field_container :visible do %>
   <%= f.label :visible, t(:visible) %><br />
-  <%= f.checkbox :visible, :class => 'fullwidth title' %>
+  <%= f.check_box :visible, :class => 'fullwidth title' %>
   <%= f.error_message_on :visible %>
 <% end %>
 
@@ -26,12 +26,4 @@
   <%= f.label :place, t(:place) %><br />
   <%= f.text_field :place, :class => 'fullwidth title' %>
   <%= f.error_message_on :place %>
-<% end %>
-
-<%= f.inputs do %>
-  <%= f.input :tagline, :label => t(:tagline) %>
-  <%= f.input :target_url, :label => t(:target_url) %>
-  <%= f.input :image, :label => t(:image) %>
-  <%= f.input :visible, :label => t(:visible) %>
-  <%= f.input :place, :label => t(:place) %>
 <% end %>
