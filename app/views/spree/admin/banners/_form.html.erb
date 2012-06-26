@@ -1,4 +1,32 @@
-<%= stylesheet_link_tag 'formtastic', 'admin/formtastic_changes' %>
+<%= f.field_container :tagline do %>
+  <%= f.label :tagline, t(:tagline) %><br />
+  <%= f.text_field :tagline, :class => 'fullwidth title' %>
+  <%= f.error_message_on :tagline %>
+<% end %>
+
+<%= f.field_container :target_url do %>
+  <%= f.label :target_url, t(:target_url) %> <span class="required">*</span><br />
+  <%= f.text_field :target_url, :class => 'fullwidth title' %>
+  <%= f.error_message_on :target_url %>
+<% end %>
+
+<%= f.field_container :image do %>
+  <%= f.label :image, t(:image) %> <span class="required">*</span><br />
+  <%= f.file_field :image, :class => 'fullwidth title' %>
+  <%= f.error_message_on :name %>
+<% end %>
+
+<%= f.field_container :visible do %>
+  <%= f.label :visible, t(:visible) %><br />
+  <%= f.checkbox :visible, :class => 'fullwidth title' %>
+  <%= f.error_message_on :visible %>
+<% end %>
+
+<%= f.field_container :place do %>
+  <%= f.label :place, t(:place) %><br />
+  <%= f.text_field :place, :class => 'fullwidth title' %>
+  <%= f.error_message_on :place %>
+<% end %>
 
 <%= f.inputs do %>
   <%= f.input :tagline, :label => t(:tagline) %>
